@@ -1,0 +1,106 @@
+/* estilos/style.css */
+:root {
+    --color-primary: #4a90e2;
+    --color-secondary: #50e3c2;
+    --color-accent: #d0021b;
+    --color-background: #f5f7fa;
+    --color-text: #4a4a4a;
+    --color-card-bg: #fff;
+    --color-card-border: #ddd;
+    --color-section-bg: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2rem;
+}
+
+.cotizaciones-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--color-section-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100%;
+    gap: 2rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 1rem;
+    justify-items: center; /* Centrar las tarjetas horizontalmente */
+}
+
+.card {
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h4 {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.card p {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .cotizaciones-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card-container {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
